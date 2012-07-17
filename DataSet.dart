@@ -14,6 +14,19 @@ class DataSet {
     });
   }
   
+  DataSet.fromCsv(String csv) {
+    data = new List<DataPoint>();
+    for (var line in csv.split('\n')) {
+      var points = line.split(',');
+      if (points.length != 2) {
+        throw new Exception('All datapoints must have 2 fields');
+      }
+      else {
+        data.add(new DataPoint(Math.parseDouble(points[0]), Math.parseDouble(points[1])));
+      }
+    }
+  }
+  
   DataSet scale(DataPoint outputMins, DataPoint outputMaxs) {
     if (data.length <= 0) {
       return new DataSet([]);
