@@ -1,9 +1,9 @@
-#library('Chart');
+#library('chart');
 
 #import('dart:html');
 
-#source('DataSet.dart');
-#source('DataPoint.dart');
+#source('dataset.dart');
+#source('datapoint.dart');
 
 class Chart {
   num height, width;

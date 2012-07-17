@@ -1,5 +1,5 @@
 #import('dart:html');
-#import('Chart.dart');
+#import('../lib/chart.dart');
 
 void main() {
   var chart = new Chart(400, 800, document.query('#chart'));
